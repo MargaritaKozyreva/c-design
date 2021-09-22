@@ -1,0 +1,34 @@
+@import './design/root';
+@import "../js/ui/ui";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-gray-10);
+}
+
+
+
+
