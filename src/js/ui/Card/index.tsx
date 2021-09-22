@@ -1,7 +1,7 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
 import cn from 'classnames';
 
-interface Props {
+interface Props extends HTMLAttributesProps{
 	children?: React.ReactNode;
 	title?: string;
 	header?: React.ReactNode;
@@ -17,9 +17,7 @@ interface HTMLAttributesProps {
 	className?: string;
 }
 
-export type CardProps = Props & HTMLAttributesProps;
-
-const Card: React.FC<CardProps> = (props: CardProps) => {
+const Card: React.FC<Props> = (props: Props) => {
 	const style = cn('card', `card--${ props.design || 'default' }`, props.className);
 	return (
 		<div className={ style }>
