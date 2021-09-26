@@ -12,20 +12,13 @@ const DemoPage = () => {
 				<P weight="regular" size="m">
 					Мой прогресс
 				</P>
-				<P weight="bold" size="m">
-					Мой прогресс
-				</P>
+				<Span weight="regular">
+					Actually you are correct. I have not yet been convinced that dynamic definition of mixins is a good idea.
+					However the issue you linked to was about including a mixin using a dynamic name. Which I am for. The OP's
+					problem is solved better by accepting an argument to a single mixin instead of defining a unique mixin for
+					each icon.
+				</Span>
 			</Card.Content>
-			<Card.Zone
-				right={
-					<Span weight="regular">
-						Actually you are correct. I have not yet been convinced that dynamic definition of mixins is a good idea.
-						However the issue you linked to was about including a mixin using a dynamic name. Which I am for. The OP's
-						problem is solved better by accepting an argument to a single mixin instead of defining a unique mixin for
-						each icon.
-					</Span>
-				}
-			/>
 		</Card>
 	);
 };
