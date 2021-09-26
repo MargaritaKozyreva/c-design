@@ -7,10 +7,10 @@ import { H1, H2, H3, P, Span } from './ui/Typography';
 const DemoPage = () => {
 	return (
 		<Card id={ 1 } design="default" title="Цель">
-			<Card.Zone left={ <H2 transform="uppercase">Мой прогресс</H2> } right={ <button>click</button> } />
+			<Card.Zone left={ <H2>Мой прогресс</H2> } right={ <button>Перейти</button> } />
 			<Card.Content>
-				<P weight="regular" size="m">
-					Мой прогресс
+				<P weight="bold" size="m" transform="uppercase">
+					Цель
 				</P>
 				<Span weight="regular">
 					Actually you are correct. I have not yet been convinced that dynamic definition of mixins is a good idea.

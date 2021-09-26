@@ -15,7 +15,7 @@ export interface Props {
 	children?: React.ReactNode;
 	type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 	weight?: 'regular' | 'medium' | 'bold';
-	transform?: 'uppercase';
+	transform?: 'lowercase' | 'uppercase' | 'capitalize' ;
 }
 
 const setDefaultStyle = (props: Props) => {

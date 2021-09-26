@@ -17,7 +17,7 @@ export interface Props {
 	size?: 'xs' | 's' | 'm';
 	type?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 	weight?: 'regular' | 'medium' | 'bold';
-	transform?: 'uppercase';
+	transform?: 'lowercase' | 'uppercase' | 'capitalize' ;
 }
 
 const setDefaultStyle = (props: Props) => {
