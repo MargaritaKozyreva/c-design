@@ -1,0 +1,14 @@
+.zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-xl);
+    &--left {
+        padding: 5px;
+        margin: 20px;
+    }
+    &--right {
+        padding: 5px;
+        margin: 20px;
+    }
+}

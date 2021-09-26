@@ -1,0 +1,8 @@
+@import "../../design/root";
+
+.heading {
+    color: var(--color-gray-100);
+    @include set-heading("bold", $FONT-HEADINGS);
+    @include set-heading("medium", $FONT-HEADINGS);
+    @include set-heading("regular", $FONT-HEADINGS);
+}

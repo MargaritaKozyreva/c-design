@@ -1,0 +1,37 @@
+@mixin set-font($weights: $FONT-WEIGHTS, $sizes: $FONT-SIZES) {
+    @each $w in $weights {
+        &.#{$w} {
+            @each $name, $val in $sizes {
+                &.#{$name} {
+                    @include font-style($w, $name);
+                }
+            }
+        }
+    }
+}
+
+@mixin set-heading($weights: $FONT-WEIGHTS, $headings: $FONT-HEADINGS) {
+    @each $w in $weights {
+        &.#{$w} {
+            @each $name, $val in $headings {
+                &.#{$name} {
+                    @include font-style($w, $val);
+                }
+            }
+        }
+    }
+}
+
+@mixin set-line-height($size: "m") {
+    @each $name, $val in $FONT-LINE-HEIGHTS {
+        @if ($name == $size) {
+            line-height: $val;
+        }
+    }
+}
+
+@mixin font-style($weight, $size) {
+    font-weight: var(--font-weight-#{$weight});
+    font-size: var(--font-size-#{$size});
+    @include set-line-height($size);
+}

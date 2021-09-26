@@ -1,40 +1,13 @@
-import React, { HTMLAttributes } from 'react';
-import cn from 'classnames';
+import React from 'react';
+import { Heading, Props as HeadingProps } from './Heading';
+import { Text, Props as TextProps } from './Text';
 
-interface Props {
-	children?: React.ReactNode;
-	type: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
-}
+export const H1: React.FC<HeadingProps> = (props) => <Heading type="h1" weight="bold" { ...props } />;
+export const H2: React.FC<HeadingProps> = (props) => <Heading type="h2" weight="bold" { ...props } />;
+export const H3: React.FC<HeadingProps> = (props) => <Heading type="h3" weight="bold" { ...props } />;
+export const H4: React.FC<HeadingProps> = (props) => <Heading type="h4" weight="bold" { ...props } />;
+export const H5: React.FC<HeadingProps> = (props) => <Heading type="h5" weight="bold" { ...props } />;
+export const H6: React.FC<HeadingProps> = (props) => <Heading type="h6" weight="bold" { ...props } />;
 
-interface HTMLAttributesProps {
-	[key: string]: any;
-	id?: string | number;
-	className?: string;
-}
-
-export type TypographyProps = Props & HTMLAttributesProps;
-
-const getTypographyStyle = (type: string) => {
-	return cn('typography', type);
-};
-
-const H: React.FC<TypographyProps> = (props: TypographyProps) => {
-	const { type, children } = props;
-	switch (type) {
-		case 'H1':
-		default:
-			return <h1 className={ getTypographyStyle(type) }>{ children }</h1>;
-		case 'H2':
-			return <h2 className={ getTypographyStyle(type) }>{ children }</h2>;
-		case 'H3':
-			return <h3 className={ getTypographyStyle(type) }>{ children }</h3>;
-		case 'H4':
-			return <h4 className={ getTypographyStyle(type) }>{ children }</h4>;
-		case 'H5':
-			return <h5 className={ getTypographyStyle(type) }>{ children }</h5>;
-		case 'H6':
-			return <h6 className={ getTypographyStyle(type) }>{ children }</h6>;
-	}
-};
-
-export default H;
+export const P: React.FC<TextProps> = (props: TextProps) => <Text type="p" size="m" { ...props } />;
+export const Span: React.FC<TextProps> = (props) => <Text type="span" size="m" { ...props } />;

@@ -1,0 +1,26 @@
+$FONT-SIZES: (
+    "xxl": var(--font-size-xxl),
+    "xl": var(--font-size-xl),
+    "l": var(--font-size-l),
+    "m": var(--font-size-m),
+    "s": var(--font-size-s),
+    "xs": var(--font-size-xs),
+    "xxs": var(--font-size-xxs),
+) !global;
+$FONT-LINE-HEIGHTS: (
+    "xxl": var(--font-line-height-xxl),
+    "xl": var(--font-line-height-xl),
+    "l": var(--font-line-height-l),
+    "m": var(--font-line-height-m),
+    "s": var(--font-line-height-s),
+    "xs": var(--font-line-height-xs),
+) !global;
+$FONT-WEIGHTS: "regular", "medium", "bold" !global;
+$FONT-HEADINGS: (
+    "h1": xxl,
+    "h2": xl,
+    "h3": l,
+    "h4": m,
+    "h5": m,
+    "h6": m,
+) !global;
