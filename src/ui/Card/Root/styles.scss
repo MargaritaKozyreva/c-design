@@ -5,11 +5,6 @@
   padding: var(--gp-2xl);
   box-sizing: border-box;
 
-  header{
-    font-size: var(--font-size-2xl);
-    color: var(--color-gray-100);
-  }
-
   &--default {
     background-color: var(--color-white);
     border-color: var(--btn-primary-bg);
@@ -22,6 +17,4 @@
     border-color: var(--color-green-20);
     color: var(--color-gray-100);
   }
-
-
 }

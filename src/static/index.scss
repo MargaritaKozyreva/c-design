@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: var(--font);
 }
 
 *,
@@ -19,10 +20,6 @@ body {
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
     background-color: var(--color-gray-10);
 }
 

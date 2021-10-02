@@ -15,12 +15,12 @@ const webpackConfig = (env, args) => {
 	
 	return {
 		entry: {
-			main: './src/js/index.tsx'
+			main: './src/index.tsx'
 		},
 		resolve: {
 			extensions: ['.ts', '.tsx', '.js'],
 			alias: {
-				'@ui': path.resolve(__dirname, 'src/js/ui'),
+				'@ui': path.resolve(__dirname, 'src/ui'),
 			}
 		},
 		output: {
@@ -89,7 +89,7 @@ const webpackConfig = (env, args) => {
 		},
 		plugins: [
 			new HtmlWebpackPlugin({
-				template: './src/js/index.html'
+				template: './src/index.html'
 			}),
 			new MiniCssExtractPlugin({
 				filename: 'static/[name].[hash].css',

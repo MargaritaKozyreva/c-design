@@ -4,6 +4,7 @@ import './styles.scss';
 
 interface Props extends HTMLAttributesProps {
 	children?: React.ReactNode;
+	margin?: 'none' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 }
 
 interface HTMLAttributesProps {
@@ -12,8 +13,8 @@ interface HTMLAttributesProps {
 }
 
 const Content: React.FC<Props> = (props: Props) => {
-	const { children, className } = props;
-	const style = cn('content', className);
+	const { children, className, margin = 'm' } = props;
+	const style = cn('card-content', `margin-${ margin }`, className);
 
 	return <div className={ style }>{ children }</div>;
 };
