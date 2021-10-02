@@ -2,8 +2,8 @@
 
 .text {
 
-    @include set-font($FONT-WEIGHTS, $FONT-SIZES);
-    
+    @include set-font();
+
     &.p,
     &.span {
         color: var(--color-gray-70);

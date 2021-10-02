@@ -1,6 +1,4 @@
-
 @include get-content {
-    
     /**
      * Используется только в верхнем регистре для коротких заголовков маленького размера.
      */
@@ -40,6 +38,37 @@
      * Двойной экстра размер шрифта. H1.
      */
     --font-size-xxl: var(--font-size-32);
-
-
 }
+
+$FONTS: (
+    "size": (
+        "xxl": var(--font-size-xxl),
+        "xl": var(--font-size-xl),
+        "l": var(--font-size-l),
+        "m": var(--font-size-m),
+        "s": var(--font-size-s),
+        "xs": var(--font-size-xs),
+        "xxs": var(--font-size-xxs),
+    ),
+    "headings": (
+        "h1": xxl,
+        "h2": xl,
+        "h3": l,
+        "h4": m,
+        "h5": m,
+        "h6": m,
+    ),
+    "line-heights": (
+        "xxl": var(--font-line-height-xxl),
+        "xl": var(--font-line-height-xl),
+        "l": var(--font-line-height-l),
+        "m": var(--font-line-height-m),
+        "s": var(--font-line-height-s),
+        "xs": var(--font-line-height-xs),
+    ),
+    "weights": (
+        "regular",
+        "medium",
+        "bold",
+    ),
+) !global;

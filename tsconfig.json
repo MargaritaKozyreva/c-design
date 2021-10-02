@@ -3,6 +3,11 @@
     "target": "es2015",
     "lib": ["es2015", "es2016", "dom"],
     "outDir": "./build/",
+    "paths": {
+      "@ui/*": ["src/ui/*"],
+      "@components/*": ["src/components/*"],
+      "@icons/*": ["src/ui/design/static/icons/*"]
+    },
     "sourceMap": true,
     "module": "commonjs",
     "jsx": "react",

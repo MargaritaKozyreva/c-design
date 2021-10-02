@@ -1,8 +1,8 @@
 import React from 'react';
 import { CardContext } from '../context';
-import Zone from '../Zone';
-import { Layout } from '../Layout';
-import { Content } from '../Content';
+import Zone from '@ui/Card/Zone';
+import { Layout } from '@ui/Card/Layout';
+import { Content } from '@ui/Card/Content';
 import './styles.scss';
 
 interface Props extends HTMLAttributesProps {

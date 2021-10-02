@@ -1,21 +1,21 @@
-@mixin set-font($weights: $FONT-WEIGHTS, $sizes: $FONT-SIZES) {
-    @each $w in $weights {
-        &.#{$w} {
-            @each $name, $val in $sizes {
-                &.#{$name} {
-                    @include font-style($w, $name);
+@mixin set-font() {
+    @each $weight in map-get($map: $FONTS, $key: "weights") {
+        &.#{$weight} {
+            @each $size, $value in map-get($map: $FONTS, $key: "size") {
+                &.#{$size} {
+                    @include font-style($weight, $size);
                 }
             }
         }
     }
 }
 
-@mixin set-heading($weights: $FONT-WEIGHTS, $headings: $FONT-HEADINGS) {
-    @each $w in $weights {
-        &.#{$w} {
-            @each $name, $val in $headings {
-                &.#{$name} {
-                    @include font-style($w, $val);
+@mixin set-heading() {
+    @each $weight in map-get($map: $FONTS, $key: "weights") {
+        &.#{$weight} {
+            @each $title, $value in map-get($map: $FONTS, $key: "headings") {
+                &.#{$title} {
+                    @include font-style($weight, $value);
                 }
             }
         }
@@ -23,9 +23,9 @@
 }
 
 @mixin set-line-height($size: "m") {
-    @each $name, $val in $FONT-LINE-HEIGHTS {
+    @each $name, $value in map-get($map: $FONTS, $key: "line-heights") {
         @if ($name == $size) {
-            line-height: $val;
+            line-height: $value;
         }
     }
 }

@@ -20,7 +20,8 @@ const webpackConfig = (env, args) => {
 		resolve: {
 			extensions: ['.ts', '.tsx', '.js'],
 			alias: {
-				'@ui': path.resolve(__dirname, 'src/ui'),
+				'@ui': path.resolve(__dirname, 'src/ui/'),
+				'@icons': path.resolve(__dirname, 'src/ui/design/static/icons'),
 			}
 		},
 		output: {
@@ -77,7 +78,7 @@ const webpackConfig = (env, args) => {
 					use: {
 						loader: 'file-loader',
 						options: {
-							name: './static/icons/[name].[ext]'
+							name: 'src/ui/design/static/icons/[name].[ext]'
 						}
 					}
 				},
@@ -97,7 +98,7 @@ const webpackConfig = (env, args) => {
 			new CleanWebpackPlugin(),
 			new CopyWebpackPlugin({
 				patterns: [{
-					from: path.join('./src/static/icons'),
+					from: path.join('src/ui/design/static/icons'),
 					to: path.join(isDevMode ? '' : PATHS.build, 'static/icons'),
 				}]
 			}),
