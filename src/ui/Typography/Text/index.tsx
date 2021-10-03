@@ -17,7 +17,7 @@ export interface Props {
 	size?: 'xs' | 's' | 'm';
 	type?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
 	weight?: 'regular' | 'medium' | 'bold';
-	transform?: 'lowercase' | 'uppercase' | 'capitalize' ;
+	transform?: 'lowercase' | 'uppercase' | 'capitalize';
 }
 
 const setDefaultStyle = (props: Props) => {
@@ -25,7 +25,13 @@ const setDefaultStyle = (props: Props) => {
 };
 
 const setDefaultClassName = (props: Props) => {
-	return cn('text', props.type || 'p', props.size || 'm', props.weight || 'regular', props.className);
+	return cn(
+		'text',
+		`text--type-${ props.type }` || 'text--type-p',
+		`text--size-${ props.size }` || 'text--size-m',
+		`text--weight-${ props.weight }` || 'text--weight-regular',
+		props.className
+	);
 };
 
 const Text: React.FC<Props> = (props: Props) => {

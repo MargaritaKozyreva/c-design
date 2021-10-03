@@ -15,7 +15,7 @@ export interface Props {
 	children?: React.ReactNode;
 	type?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 	weight?: 'regular' | 'medium' | 'bold';
-	transform?: 'lowercase' | 'uppercase' | 'capitalize' ;
+	transform?: 'lowercase' | 'uppercase' | 'capitalize';
 }
 
 const setDefaultStyle = (props: Props) => {
@@ -23,7 +23,7 @@ const setDefaultStyle = (props: Props) => {
 };
 
 const setDefaultClassName = (props: Props) => {
-	return cn('heading', props.type || 'h1', props.weight || 'bold', props.className);
+	return cn('heading', `heading--type-${ props.type }` || 'heading--type-h1', `heading--weight-${ props.weight }` || 'heading--weight-bold', props.className);
 };
 
 const Heading: React.FC<Props> = (props) => {

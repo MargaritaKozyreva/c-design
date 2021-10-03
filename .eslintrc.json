@@ -93,7 +93,7 @@
     }],
     "func-call-spacing" : ["error", "never"],
     "max-len": ["warn", {
-      "code": 120,
+      //"code": 120,
       "ignoreUrls": true,
       "ignoreTemplateLiterals": true,
       "ignoreRegExpLiterals": true,

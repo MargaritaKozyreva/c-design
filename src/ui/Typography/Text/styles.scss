@@ -2,7 +2,7 @@
 
 .text {
 
-    @include set-font();
+    @include set-fontt();
 
     &.p,
     &.span {

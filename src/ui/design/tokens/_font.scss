@@ -27,7 +27,7 @@
     /**
      * Большой размер шрифта. H3.
      */
-    --font-size-l: var(--font-size-20);
+    --font-size-l: var(--font-size-18);
 
     /**
      * Экстра большой размер шрифта. H2.
@@ -50,15 +50,25 @@ $FONTS: (
         "xs": var(--font-size-xs),
         "xxs": var(--font-size-xxs),
     ),
-    "headings": (
-        "h1": xxl,
-        "h2": xl,
-        "h3": l,
-        "h4": m,
-        "h5": m,
-        "h6": m,
+    "type": (
+        "h1": "xxl",
+        "h2": "xl",
+        "h3": "l",
+        "h4": "m",
+        "h5": "m",
+        "h6": "m",
+        "p": (
+            m,
+            s,
+            xs,
+        ),
+        "span": (
+            m,
+            s,
+            xs,
+        ),
     ),
-    "line-heights": (
+    "line-height": (
         "xxl": var(--font-line-height-xxl),
         "xl": var(--font-line-height-xl),
         "l": var(--font-line-height-l),
@@ -66,9 +76,9 @@ $FONTS: (
         "s": var(--font-line-height-s),
         "xs": var(--font-line-height-xs),
     ),
-    "weights": (
-        "regular",
-        "medium",
-        "bold",
+    "weight": (
+        "regular": var(--font-weight-regular),
+        "medium": var(--font-weight-medium),
+        "bold": var(--font-weight-bold),
     ),
 ) !global;
