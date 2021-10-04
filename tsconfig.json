@@ -4,8 +4,8 @@
     "lib": ["es2015", "es2016", "dom"],
     "outDir": "./build/",
     "paths": {
+      "@components/*": ["src/app/components/*"],
       "@ui/*": ["src/ui/*"],
-      "@components/*": ["src/components/*"],
       "@icons/*": ["src/ui/design/static/icons/*"]
     },
     "sourceMap": true,

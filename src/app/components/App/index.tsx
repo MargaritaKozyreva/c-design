@@ -39,10 +39,9 @@ const App = () => {
 						size="xl"
 						color="green"
 						onClick={ () => {
-							return console.log('h1');
+							return console.log('hi');
 						} }
 					/>
-					
 				</Card.Zone>
 
 				<Card.Content margin="xl">

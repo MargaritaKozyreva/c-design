@@ -37,14 +37,22 @@ const setDefaultClassName = (props: Props) => {
 const Text: React.FC<Props> = (props: Props) => {
 	const { children, ...attrs } = props;
 	let content = (
-		<span className={ setDefaultClassName(props) } style={ setDefaultStyle(props) } { ...attrs }>
+		<span
+			className={ setDefaultClassName(props) }
+			style={ setDefaultStyle(props) }
+			{ ...attrs }
+		>
 			{ children }
 		</span>
 	);
 
 	if (props.type === 'p') {
 		content = (
-			<p className={ setDefaultClassName(props) } style={ setDefaultStyle(props) } { ...attrs }>
+			<p
+				className={ setDefaultClassName(props) }
+				style={ setDefaultStyle(props) }
+				{ ...attrs }
+			>
 				{ children }
 			</p>
 		);
@@ -52,7 +60,11 @@ const Text: React.FC<Props> = (props: Props) => {
 
 	if (props.type === 'span') {
 		content = (
-			<span className={ setDefaultClassName(props) } style={ setDefaultStyle(props) } { ...attrs }>
+			<span
+				className={ setDefaultClassName(props) }
+				style={ setDefaultStyle(props) }
+				{ ...attrs }
+			>
 				{ children }
 			</span>
 		);

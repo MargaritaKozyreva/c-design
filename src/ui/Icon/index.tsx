@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import './styles.scss';
 import cn from 'classnames';
 
 export interface Props extends HTMLAttributesProps {
 	name: any;
-	onClick?: () => any;
+	onClick?: MouseEventHandler<HTMLSpanElement>;
 	size?: 'xs' | 's' | 'm' | 'l' | 'xl';
+	disabled?: boolean;
 	color?: any;
 }
 
@@ -14,9 +15,13 @@ interface HTMLAttributesProps {
 }
 
 const setDefaultStyle = (props: Props) => {
-	const { onClick } = props;
+	const { onClick, disabled } = props;
 	const style: any = {};
-	if (onClick) {
+	if (disabled) {
+		style.cursor = 'not-allowed';
+		style.opacity = 0.2;
+	}
+	if (onClick && !disabled) {
 		style.cursor = 'pointer';
 	}
 
@@ -34,12 +39,12 @@ const setDefaultClassName = (props: Props) => {
 };
 
 const Icon: React.FC<Props> = (props) => {
-	const { onClick, ...attrs } = props;
+	const { onClick, disabled = false, ...attrs } = props;
 	return (
 		<span
 			className={ setDefaultClassName(props) }
 			style={ setDefaultStyle(props) }
-			onClick={ onClick }
+			onClick={ !disabled ? onClick : undefined }
 			{ ...attrs }
 		/>
 	);
