@@ -4,9 +4,8 @@
     "lib": ["es2015", "es2016", "dom"],
     "outDir": "./build/",
     "paths": {
-      "@components/*": ["src/app/components/*"],
-      "@ui/*": ["src/ui/*"],
-      "@icons/*": ["src/ui/design/static/icons/*"]
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["../../ui/*"],
     },
     "sourceMap": true,
     "module": "commonjs",
