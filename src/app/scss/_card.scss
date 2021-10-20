@@ -1,0 +1,14 @@
+@import '../../ui/design/root';
+
+.c-card-zone {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &.header {
+        color: var(--color-gray-60);
+    }
+    &.footer {
+        color: var(--color-gray-40);
+    }
+}

@@ -4,9 +4,15 @@
     "lib": ["es2015", "es2016", "dom"],
     "outDir": "./build/",
     "paths": {
+<<<<<<< HEAD
       "@ui/*": ["src/workspaces/ui/*"],
       "@icons/*": ["src/workspaces/icons/*"],
       "@ui-tokens/*": ["src/workspaces/ui-tokens/*"],
+=======
+      "@components/*": ["src/app/components/*"],
+      "@ui/*": ["src/ui/*"],
+      "@icons/*": ["src/ui/design/static/icons/*"]
+>>>>>>> 17f7a061189e00c496c957e27a2e5301f619cdfc
     },
     "sourceMap": true,
     "module": "commonjs",
@@ -38,7 +44,11 @@
     "suppressImplicitAnyIndexErrors": false,
   },
   "include": [
+<<<<<<< HEAD
     "src/workspaces/**/*"
+=======
+    "src/**/*"
+>>>>>>> 17f7a061189e00c496c957e27a2e5301f619cdfc
   ],
   "exclude": [
     "node_modules",
