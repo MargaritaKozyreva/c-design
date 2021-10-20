@@ -1,5 +1,0 @@
-@mixin set-color($type, $color) {
-    @each $color, $value in $COLORS {
-        $type: #{$color};
-    }
-}
